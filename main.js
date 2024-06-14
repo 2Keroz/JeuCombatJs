@@ -10,22 +10,22 @@ let attacks = [
     {
         name: "Soin Léger",
         hp: -15,
-        precision: 1
+        precision: 2
     },
     {
         name: "Coup Puissant",
         hp: 20,
-        precision: 1
+        precision: 2
     },
     {
         name: "Frappe Dévastatrice",
         hp: 30,
-        precision: 1
+        precision: 3
     },
 ]
 let joueur =
 {
-    name: "Guerrier de feu",
+    name: "",
     pvMax: 50,
     pv: 50,
     attack: attacks,
@@ -39,12 +39,12 @@ let ia =
     attack: attacks,
 }
 
-// joueur.name = prompt(" Entre ton nom : ")
+
 
 console.log("Bienvenue, tu vas assister à un combat Légendaire ! Le premier à O pv va sombrer...\n");
 let game = prompt("Voulez-vous jouer ? Oui (O) Non (N)").toUpperCase()
 if (game == "O") {
-
+    joueur.name = prompt(" Entre ton nom : ")
     function randomize(min, max) {
         return Math.round(Math.random() * (max - min) + min)
     }
